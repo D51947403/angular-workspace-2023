@@ -8,14 +8,17 @@ import { Component, NgZoneOptions, OnInit } from '@angular/core';
 export class IfComponent implements OnInit{
   x:number; 
   y:number;
-
+  s:string;
   constructor(){
     this.x=10;
     this.y=20;
+    this.s='success';
   }
-  
+
   ngOnInit(): void {
   
   }
-
+  myFun():boolean {
+    return 10>8;
+    }
 }

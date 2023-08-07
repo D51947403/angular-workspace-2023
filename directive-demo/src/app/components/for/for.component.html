@@ -18,9 +18,17 @@
 
 <table border="1" > 
     <thead>
-       <tr><td> Movie Title </td> <td> Genre </td> <td> Director </td></tr>
+       <tr [ngStyle]="{'color':'red','background-color':'yellow'}">
+         <td> Movie Title </td>
+         <td> Genre </td> 
+         <td> Director </td>
+        </tr>
     </thead>
     <tbody *ngFor="let movie of movies">
-       <tr><td> {{movie.title}}</td> <td> {{movie.genre}} </td> <td> {{movie.director}}</td></tr>
+       <tr>
+        <td [style.background]="'blue'"> {{movie.title}}</td> 
+        <td [style.color]="'green'"> {{movie.genre}} </td>
+         <td [style.color]="'aqua'"> {{movie.director}}</td>
+        </tr>
     </tbody>
    </table>

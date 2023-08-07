@@ -6,8 +6,11 @@
 <br>
 
 <table border="1" > 
- <thead>
-    <tr><td> First Name </td> <td> Last Name </td> <td> Score </td></tr>
+ <thead [ngStyle]="{color:color,'font-size.px':fontSize}">
+    <tr>
+        <td > First Name </td>
+         <td> Last Name </td> 
+         <td> Score </td></tr>
  </thead>
  <tbody *ngFor="let student of students">
     <tr><td> {{student.fname}}</td> <td> {{student.lname}} </td> <td> {{student.score}}</td></tr>
@@ -28,7 +31,7 @@
        <tr>
         <td [style.background]="'blue'"> {{movie.title}}</td> 
         <td [style.color]="'green'"> {{movie.genre}} </td>
-         <td [style.color]="'aqua'"> {{movie.director}}</td>
+         <td [style.color]="'aqua'" [style.font-size.px]="fontSize"> {{movie.director}}</td>
         </tr>
     </tbody>
    </table>

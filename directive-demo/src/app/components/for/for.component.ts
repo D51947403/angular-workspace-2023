@@ -9,6 +9,8 @@ export class ForComponent {
   courses :string[];
   students :IStudent[];
   movies :IMovie[];
+  color:string;
+  fontSize:string;
   constructor(){
     this.courses=[
       'Angular' ,'TypeScript','Java' ,'React','Node'
@@ -45,8 +47,10 @@ export class ForComponent {
         title:"Sigham",
         genre :"Action and Drama",
         director:"Rohit Shetty"
-      },
+      }
     ];
+    this.color="blue";
+    this.fontSize="40";
   }
 }
 interface IStudent{

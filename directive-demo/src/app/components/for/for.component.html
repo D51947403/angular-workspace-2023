@@ -1,0 +1,25 @@
+<div *ngFor="let course of courses" >
+     <div>{{course}}</div>
+</div>
+
+<br>
+
+<table border="1" > 
+ <thead>
+    <tr><td> First Name </td> <td> Last Name </td> <td> Score </td></tr>
+ </thead>
+ <tbody *ngFor="let student of students">
+    <tr><td> {{student.fname}}</td> <td> {{student.lname}} </td> <td> {{student.score}}</td></tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table border="1" > 
+    <thead>
+       <tr><td> Movie Title </td> <td> Genre </td> <td> Director </td></tr>
+    </thead>
+    <tbody *ngFor="let movie of movies">
+       <tr><td> {{movie.title}}</td> <td> {{movie.genre}} </td> <td> {{movie.director}}</td></tr>
+    </tbody>
+   </table>

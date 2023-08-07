@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { IfComponent } from './components/if/if.component';
 import { SwitchComponent } from './components/switch/switch.component';
 import { AtmComponent } from './components/atm/atm.component';
+import { ForComponent } from './components/for/for.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IfComponent,
     SwitchComponent,
-    AtmComponent
+    AtmComponent,
+    ForComponent
   ],
   imports: [
     BrowserModule,

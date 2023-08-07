@@ -11,6 +11,8 @@ export class ForComponent {
   movies :IMovie[];
   color:string;
   fontSize:string;
+  useTdata:boolean;
+  classObj:Object;
   constructor(){
     this.courses=[
       'Angular' ,'TypeScript','Java' ,'React','Node'
@@ -51,6 +53,10 @@ export class ForComponent {
     ];
     this.color="blue";
     this.fontSize="40";
+    this.useTdata=true;
+    this.classObj={
+      tdata:this.useTdata
+    }
   }
 }
 interface IStudent{

@@ -7,11 +7,14 @@ import { UpperCaseConverterComponent } from './components/upper-case-converter/u
 import { UpperCaseConverterService } from './services/upper-case-converter.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CustomerComponent } from './components/customer/customer.component';
+import { CustomerService } from './services/customer.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UpperCaseConverterComponent
+    UpperCaseConverterComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UpperCaseConverterService],
-  bootstrap: [UpperCaseConverterComponent]
+  providers: [UpperCaseConverterService ,CustomerService],
+  bootstrap: [UpperCaseConverterComponent,CustomerComponent]
 })
 export class AppModule { }

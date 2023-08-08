@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeeService {
+  // spring boot demo project name is ems-app
   private basUrl ="http://localhost:8080/ems-app/api/v1/employees";
   constructor(private http:HttpClient) { }
   

@@ -1,0 +1,22 @@
+<h1> Create Customer </h1>
+
+<form (ngSubmit)="createCustomer()">
+    <div>
+       Id : <input type="hidden" id="custId" name="custId" [(ngModel)]="customer.custId" />
+    </div>
+    <div>
+       Name : <input type="text" id="custName" name="custName" [(ngModel)]="customer.custName" />
+    </div>
+    <div>
+       Address : <input type="text" id="address" name="address" [(ngModel)]="customer.address" />
+    </div>
+    <div>
+     Type:   <input type="text" id="type" name="type" [(ngModel)]="customer.type" [ngClass]="'input-upper'" />
+    </div>
+     
+    <div>
+        <input type="submit" id="submit" name="submit" value="Create Customer"/>
+    </div>
+</form>
+
+{{createResponse |json}}

@@ -1,2 +1,16 @@
 <h1> Customer List</h1>
 {{customers | json}}
+
+<br/><br/>
+<a [routerLink]="'/create'" >Create Customer</a>
+
+<br/><br/>
+<a [routerLink]="'/update'" >Update Customer</a>
+
+<br/><br/>
+<a [routerLink]="'/fetch'" >Fetch Customer</a>
+
+<br/><br/>
+<a [routerLink]="'/delete'" >Delete Customer</a>
+
+<router-outlet></router-outlet>

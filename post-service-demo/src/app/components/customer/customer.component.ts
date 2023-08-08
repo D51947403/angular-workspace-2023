@@ -3,6 +3,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 
 import { HttpErrorResponse } from '@angular/common/http';
 import { UpperCaseConverterService } from 'src/app/services/upper-case-converter.service';
+import { Observable, forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-customer',
@@ -12,13 +13,22 @@ import { UpperCaseConverterService } from 'src/app/services/upper-case-converter
 export class CustomerComponent implements OnInit{
 
   public customers :any;
+  public countryData :any;
   
 constructor(private customerService :CustomerService ,private upperCaseService :UpperCaseConverterService){
 
 };
 
   ngOnInit(): void {
-    this.getCustomer();
+  //  this.getCustomer();
+  forkJoin(
+    this.customerService.getCustomers(),this.upperCaseService.convertToUpperCase('india'))
+    .subscribe(
+      (response :any) =>{
+        this.customers =response[0];
+        this.countryData =response[1];
+      }
+    );
   }
 
   public getCustomer():any{

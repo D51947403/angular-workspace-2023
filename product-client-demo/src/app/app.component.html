@@ -1,37 +1,9 @@
 <h1> Products List</h1>
 <h2> {{products | json}}</h2>
 
-<br/>
-<h1> Create Product</h1>
-<input type="hidden" [(ngModel)] ="prodId" /><br/>
+<a [routerLink]="'/create'" >Create</a> <br/><br/>
+<a [routerLink]="'/update'" >Update</a> <br/><br/>
+<a [routerLink]="'/fetch'" >Fetch</a> <br/><br/>
+<a [routerLink]="'/delete'" >Delete</a> <br/><br/>
 
-Name :<input type="text" [(ngModel)] ="prodName" /><br/>
-Description :<input type="text" [(ngModel)] ="prodDesc" /><br/>
-Price :<input type="number" [(ngModel)] ="price" /><br/>
-<button (click)="createProduct({'prodId':prodId,'prodName' :prodName,'prodDesc':prodDesc,'price':price})" > Create</button>
-<h1> {{createResponse | json}}</h1>
-<br/>
-
-<br/>
-<h1> Update Product</h1>
-Id :<input type="number" [(ngModel)] ="prodId1"  /><br/>
-Name :<input type="text" [(ngModel)] ="prodName1" /><br/>
-Description :<input type="text" [(ngModel)] ="prodDesc1" /><br/>
-Price :<input type="number" [(ngModel)] ="price1" /><br/>
-<button (click)="updateProduct({'prodId':prodId1,'prodName' :prodName1,'prodDesc':prodDesc1,'price':price1})" > Update</button>
-<h1> {{updateResponse | json}}</h1>
-<br/>
-
-<br/>
-<h1> Fetch Product</h1>
-Id :<input type="number" [(ngModel)] ="prodId2" /><br/>
-<button (click)="getProductById(prodId2)" > Fetch</button>
-<h1> {{getProductResponse | json}}</h1>
-<br/>
-
-<br/>
-<h1> Delete Product</h1>
-Id :<input type="number" [(ngModel)] ="prodId3" /><br/>
-<button (click)="deleteProductById(prodId3)" > Delete</button>
-<h1> {{deleteResponse | json}}</h1>
-<br/>
+<router-outlet></router-outlet>

@@ -1,0 +1,8 @@
+<h1> Create Product</h1>
+<input type="hidden" [(ngModel)] ="prodId" /><br/>
+
+Name :<input type="text" [(ngModel)] ="prodName" /><br/>
+Description :<input type="text" [(ngModel)] ="prodDesc" /><br/>
+Price :<input type="number" [(ngModel)] ="price" /><br/>
+<button (click)="createProduct({'prodId':prodId,'prodName' :prodName,'prodDesc':prodDesc,'price':price})" > Create</button>
+<h1> {{createResponse | json}}</h1>

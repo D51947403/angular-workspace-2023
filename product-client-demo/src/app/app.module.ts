@@ -6,10 +6,18 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDataService } from './services/product-data.service';
 import { FormsModule } from '@angular/forms';
+import { CreateComponent } from './components/create/create.component';
+import { UpdateComponent } from './components/update/update.component';
+import { DeleteComponent } from './components/delete/delete.component';
+import { FetchComponent } from './components/fetch/fetch.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateComponent,
+    UpdateComponent,
+    DeleteComponent,
+    FetchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,52 @@
+<div class="container">
+<form #personForm="ngForm" (ngSubmit)="onSubmit(personForm.value)">
+ <div>
+  <label for="">First Name</label>
+  <input type="text" name="firstName" [(ngModel)]="firstName"/>
+ </div>
+
+ <div>
+  <label for="">Last Name</label>
+  <input type="text" name="lastName" [(ngModel)]="lastName"/>
+ </div>
+
+ <div>
+  <label for="">Email Name</label>
+  <input type="email" name="email" [(ngModel)]="email"/>
+ </div>
+
+ <div>
+  <label for="">Gender Name</label>
+  <input type="radio" name="gender" value="Male"  [(ngModel)]="gender"/>Male
+  <input type="radio" name="gender" value="Female"  [(ngModel)]="gender"/>Female
+ </div>
+ 
+ <div ngModelGroup="address">
+  <div>
+    <label for="">Street Name</label>
+    <input type="text" name="street" [(ngModel)]="street"/>
+   </div>
+  <div>
+    <label for="">City Name</label>
+    <input type="text" name="city" [(ngModel)]="city"/>
+   </div>
+   <div>
+    <label for="">Country Name</label>
+   <select name="country" [(ngModel)]="country"> 
+    <option value="USA" selected>USA</option>
+    <option value="India">India</option>
+    <option value="Brazil">Brazil</option>
+    <option value="Canada">Canada</option>
+  </select>
+   </div>
+ </div>
+  
+ <div>
+  <input type="submit" class="btn btn-success" value="Save Person"/>
+ </div>
+</form>
+<br/>
+<br/>
+{{personForm.value | json}}}
+
+</div>

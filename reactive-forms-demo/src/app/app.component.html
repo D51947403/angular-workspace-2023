@@ -1,0 +1,67 @@
+<div class="container">
+     <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+               <label>First Name </label>
+               <input type="text" class="form-control" formControlName="firstName" />
+          </div>
+          <div class="alert alert-danger" *ngIf="personForm.controls['firstName'].hasError('required')">
+               First name can not be empty.
+          </div>
+          <div class="alert alert-danger" *ngIf="personForm.controls['firstName'].hasError('minlength')">
+               Minimum three characters required for first name
+          </div>
+          <div class="alert alert-danger" *ngIf="personForm.controls['firstName'].hasError('maxlength')">
+               Maximum eight characters should be there for first name
+          </div>
+
+          <div class="form-group">
+               <label>Last Name </label>
+               <input type="text" class="form-control" formControlName="lastName" />
+          </div>
+
+          <div class="form-group">
+               <label>Email </label>
+               <input type="email" class="form-control" formControlName="email" />
+          </div>
+          <div class="alert alert-danger" *ngIf="personForm.controls['email'].hasError('email')">
+               Email should be in email format i.e xyz@abc.com 
+          </div>
+
+          <div class="form-group">
+               <label>Gender</label>
+               <input type="radio" formControlName="gender" value="male"> Male
+               <input type="radio" formControlName="gender" value="female"> Female
+          </div>
+          <!-- from within form -->
+          <div class="form-group" formGroupName="address">
+               <div class="form-group">
+                    <label>Street </label>
+                    <input type="text" class="form-control" formControlName="street" />
+               </div>
+               <div class="form-group">
+                    <label>City </label>
+                    <input type="text" class="form-control" formControlName="city" />
+               </div>
+               <div class="form-group">
+                    <label>Select Country </label>
+                    <!-- <select class="form-control" formControlName="country">
+                         <option value="USA">USA </option>
+                         <option value="India">India </option>
+                         <option value="Canada">Canada </option>
+                         <option value="France">France </option>
+                         <option value="Netherland">Netherland </option>
+                    </select> -->
+                    <select class="form-control" formControlName="country">
+                       <option *ngFor="let country of countries" value="{{country}}" >{{country}}</option>
+                    </select>
+
+               </div>
+          </div>
+          <div align="center">
+               <input type="submit" class="btn btn-success" />
+          </div>
+
+     </form>
+
+</div>

@@ -1,0 +1,55 @@
+
+Casing pipes
+<h1> {{title}}</h1>
+<h1> {{title | titlecase}}</h1>
+<h1> {{title | uppercase}}</h1>
+<h1> {{title | lowercase}}</h1>
+<hr/>
+Date Pipes
+<h1>  {{myDate}} </h1> 
+<h1>  {{myDate | date :'dd-MM-yyyy'}} </h1> 
+<h1>  {{myDate | date :'MMM-dd-yyyy'}} </h1> 
+<h1>  {{myDate | date :'shortDate'}} </h1> 
+<h1>  {{myDate | date :'mediumDate'}} </h1> 
+<h1>  {{myDate | date :'longDate'}} </h1> 
+
+<hr/>
+Currency Pipes
+<h1>  {{myMoney}} </h1> 
+<h1>  {{myMoney | currency}} </h1> 
+<h1>  {{myMoney | currency:'GBP'}} </h1> 
+<h1>  {{myMoney | currency:'INR'}} </h1> 
+<h1>  {{myMoney | currency:'RUS'}} </h1> 
+
+<hr/>
+json pipes
+<h1>{{myObj}}</h1>
+<h1>{{myObj | json}}</h1>
+<hr/>
+Number Pipes 
+<h1>{{myNumber}}</h1>
+<h1>{{myNumber | number :'6.2-3'}}</h1>
+<hr/>
+Percentage Pipes 
+<h1> {{stock}}</h1>
+<h1> {{stock | percent}}</h1>
+<h1> {{stock | percent:'6.2-2'}}</h1>
+<hr/>
+Slice Pipes 
+<h1> {{numberArr}}</h1>
+<h1> {{numberArr | slice:1:4}}</h1>
+<h1> {{numberArr | slice:2}}</h1>
+<h1> {{numberArr | slice:1:-2}}</h1>
+
+<b *ngFor="let v of numberArr | slice:2">  
+   {{v}}
+</b>
+<hr/>
+async pipe 
+<h1> {{promiseData}}</h1>
+
+<h1> {{myPromiseData | async}}</h1>
+<hr>
+Custom pipe 
+<h1>  {{ "hello" | reverseStringPipe}}</h1> 
+

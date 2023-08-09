@@ -1,0 +1,19 @@
+<div class="container">
+    <form #userLoginForm="ngForm" (ngSubmit)="onLogin(userLoginForm.value)">
+        <div>
+            <label>User Email</label>
+            <input type="email" name="email" [(ngModel)]="email"/>
+        </div>
+
+        <div>
+            <label>User Password</label>
+            <input type="password" name="password" [(ngModel)]="password" />
+        </div>
+        <div>
+         <input type="submit" value="Login" class="btn btn-success"/>
+        </div>   
+    </form>
+
+</div>
+
+{{userLoginForm.value | json}}

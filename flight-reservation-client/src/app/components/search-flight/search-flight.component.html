@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Flights</title>
+  </head>
+  <body>
+    <h2>Flights:</h2>
+   <table border="2" style="background-color: azure;">
+     <tr>
+       <th>Airlines</th>
+       <th>Departure City</th>
+       <th>Arrival City</th>
+       <th>Departure Date Time</th>
+       <th>Choose Flight</th>
+     </tr>
+     <tr *ngFor="let flight of searchedData">
+       <td>{{flight.operatingAirLines}}</td>
+       <td>{{flight.departureCity}}</td>
+       <td>{{flight.arrivalCity}}</td>
+       <td>{{flight.estimatedDepartureTime}}</td>
+       <td><a (click)='onSelect(flight.id)'>Select</a></td>
+     </tr>
+   </table>
+  </body>
+</html>
+<!-- <button (click)="onSelect(2)"> Select</button>
+{{searchedData |json}} -->
